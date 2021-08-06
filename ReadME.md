@@ -1,8 +1,7 @@
 1.Environment
 		
     pip install pipenv
-    pipenv shell inside project folder
-    pip env shell when you want to activate env
+    pipenv shell (inside project folder)(create or activate env)
 ----------------------------------------------
 2.Libraries
 
@@ -51,4 +50,20 @@
     | django_session             |
     +----------------------------+
 ----------------------------------------------
-5. 
+5. Run the project
+
+    python manage.py runserver
+----------------------------------------------
+6 Adding an Admin Panel
+    
+    create SU
+        python manage.py createsuperuser
+        username: user
+        password: 1234
+    
+    goto: http://127.0.0.1:8000/admin/login/?next=/admin/
+
+----------------------------------------------
+7 
+
+
