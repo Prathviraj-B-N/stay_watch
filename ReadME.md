@@ -1,4 +1,4 @@
-https://img.shields.io/badge/<Django>-<v3.2.6>-<blue>
+![https://img.shields.io/badge/<Django>-<v3.2.6>-<blue>]
 
 
 1.Environment
