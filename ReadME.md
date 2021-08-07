@@ -1,3 +1,6 @@
+https://img.shields.io/badge/<Django>-<v3.2.6>-<blue>
+
+
 1.Environment
 		
     pip install pipenv
@@ -64,6 +67,40 @@
     goto: http://127.0.0.1:8000/admin/login/?next=/admin/
 
 ----------------------------------------------
-7 
+7. Add path to templates folder
+    settings.py > TEMPLATES > 'DIRS': ['templates']
+    Create directory 'templates' in main project folder
+
+----------------------------------------------
+ 8. Serving static files
+    
+    all css,js,assets files stored in staticFiles
+
+    for deployment purpose use : https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/
+    otherwise:
+        STATIC_URL has the url from where the static files are served
+        in settings.py 
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+            STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+            STATICFILES_DIRS = [
+                add paths to your static files here for ex: os.path.join(BASE_DIR,'appName/staticFolderName')
+            ]
+
+        django will search all these folder to find static files and move them to a new folder called static to serve to client
+
+        Run: python manage.py collectstatic
+----------------------------------------------
+9. Create an app webpages
+    python manage.py startapp webpages
+
+    creates an app named webpages with app name 'WebpagesConfig'
+    add urls.py file to webpages app
+
+    settings.py >
+    add 'webpages.apps.WebpagesConfig' to INSTALLED_APPS
+----------------------------------------------
+
 
 
