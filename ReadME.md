@@ -1,5 +1,6 @@
 ![Framework](https://img.shields.io/badge/Django-3.2.6-blue)
 
+----------------------------------------------
 
 
 1.Environment
@@ -56,7 +57,7 @@
 ----------------------------------------------
 5. Run the project
 
-    python manage.py runserver
+        python manage.py runserver
 ----------------------------------------------
 6 Adding an Admin Panel
     
@@ -69,6 +70,7 @@
 
 ----------------------------------------------
 7. Add path to templates folder
+
     settings.py > TEMPLATES > 'DIRS': ['templates']
     Create directory 'templates' in main project folder
 
@@ -81,7 +83,8 @@
     otherwise:
         STATIC_URL has the url from where the static files are served
         in settings.py 
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+            
+            STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
             STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
@@ -93,7 +96,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
         Run: python manage.py collectstatic
 ----------------------------------------------
-9. Create an app webpages
+9. Create an app 'webpages'
+    
     python manage.py startapp webpages
 
     creates an app named webpages with app name 'WebpagesConfig'
@@ -102,6 +106,50 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
     settings.py >
     add 'webpages.apps.WebpagesConfig' to INSTALLED_APPS
 ----------------------------------------------
+10. Setting up urls.py in main project folder(project level urls.py)
+
+        from django.urls import include
+        from django.conf.urls.static import static
+        
+        1.add this to urlpatterns so that we can define app level urls.py
+            path('',include('webpages.urls'))
+
+        2.add static root to urlpatterns
+            urlspattern += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT) 
+----------------------------------------------
+11. Setting up urls.py in app level
+
+        for each view, setup root
+        ex: path('',views.home,name = "home")
+----------------------------------------------
+12. Setting up views.py
+        
+        def home(request):
+            pass
+----------------------------------------------
+13. Templating
+        define base.html in templates
+        in all other files use 
+            {% extends 'base.html' %}
+            {% block content %}
+            {% endblock %}
+
+        {% include 'htmlSnippet.html' %}
+----------------------------------------------
+14. Add your static files like js,css into staticFiles foder
+
+    python manage.py collectstatic
+    in html files add {% load static %}
+----------------------------------------------
+15. Setup paths for css and js in html files
+
+    {% static "css/filename.css" %} by default searches in static
+     
+     
+
+
+
+
 
 
 

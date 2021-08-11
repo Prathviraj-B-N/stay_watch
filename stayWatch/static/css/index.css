@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+header{
+    background: hsl(0, 0%, 4%)	;
+}
+.navbar{
+    padding:0  5rem 0 5rem;
+    height: 80px;
+
+}
+
+.navbar .navbar-brand{
+    font-size: 40px;
+    color: white;
+
+}
+.navbar .navbar-brand span{
+    color: crimson;
+}
+.navbar-nav{
+    display: inline;
+}
+.navbar-nav .navbar-item   {
+    display: inline-block;
+    margin-left: 15px;
+  
+}
+.navbar-nav .navbar-item a{
+    color: white;
+    font-size: 18px;
+}
+.navbar-nav .button{
+    display: inline;
+    margin-left:15px ;
+   
+    
+}
+.navbar-nav .button button{
+    background: hsl(16, 100%, 50%)	;
+    color: white;
+    margin-left: 15px;
+    transition: 0.5s ease all;
+    font-size: 18px;
+}
+.navbar-nav .button button:hover{
+    color: hsl(16, 100%, 50%);
+    background: transparent;
+    border: 1px solid white;
+}
+.navbar .nav-toggle{
+    display: none;
+}
+
+
+
+/*home */
+.home{
+    height: 90vh;
+   padding-top: 100px;
+   background: #BEE3DB;
+   background-image: url("../img/pexels-joão-jesus-921322\ \(2\).jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+.home-content{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+.home .home-content .left{
+    width: 50%;
+    color: white;
+
+}
+
+.home .home-content .left img{
+    width: 100%;
+    height: 400px;
+}
+.home .home-content .right{
+    width: 50%;
+    
+}
+.home .home-content .right h1{
+    font-size: 70px;
+    margin-top: 100px;
+    font-weight: 500;
+    color: white;
+}
+.home .home-content .right h1 span{
+    color: crimson;
+    
+}
+.home .home-content .right h3{
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+}
+.home .home-content .right p{
+    font-size: 18px;
+    color: white;
+    
+}
+.home .home-content .right button{
+    background: hsl(16, 100%, 50%)	;
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
+    
+    
+    transition: 0.5s;
+}.home .home-content .right button:hover{
+    background: transparent;
+    color: hsl(16, 100%, 50%);
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+@media (min-width: 200px) and (max-width: 575.98px) { 
+    .navbar{
+        padding:0  2rem 0 2rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+        
+        
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+
+    .home{
+        height: max-content;
+        
+     }
+     .home .home-content{
+         display: flex;
+         flex-direction: column-reverse;
+     }
+     .home .home-content .right{
+         width: 100%;
+     }
+     .home .home-content .left{
+         width: 100%;
+         margin-top: 40px;
+         margin-bottom: 40px;
+     }
+     .home .home-content .right h1{
+         margin: 0;
+         
+     }
+     .home .home-content .right button{
+         margin-left: 20px;
+     }
+ }
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar{
+        padding:0  3rem 0 3rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+        transition: 0.8s;
+        
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .home{
+        height: max-content;
+        
+     }
+     .home .home-content{
+         display: flex;
+         flex-direction: column-reverse;
+     }
+     .home .home-content .right{
+         width: 100%;
+     }
+     .home .home-content .left{
+         width: 100%;
+         margin-top: 40px;
+         margin-bottom: 40px;
+     }
+     .home .home-content .right h1{
+         margin: 0;
+         
+     }
+     .home .home-content .right button{
+         margin-left: 20px;
+     }
+ }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar{
+        padding:0  4rem 0 4rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+        transition: 0.8s;
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+     
+
+      
+    }
+  
+    .home{
+       height: max-content;
+       
+    }
+    .home .home-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home .home-content .right{
+        width: 100%;
+    }
+    .home .home-content .left{
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .home .home-content .right h1{
+        margin: 0;
+        
+    }
+    .home .home-content .right button{
+        margin-left: 20px;
+    }
+ }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .home .home-content .right h1{
+        font-size: 60px;
+        
+    }
+    
+    .home .home-content .right h3{
+        font-size: 25px;
+        
+    }
+    .home .home-content .right p{
+        font-size: 15px;
+        
+    }
+ }
+
+
+@media (min-width: 1200px) { }

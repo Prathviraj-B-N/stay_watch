@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <title>Title</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href={% static "css/index.css" %}>
+</head>
+<body>
+    <section class="home">
+        <div class="home-content">
+            <div class="left">
+                <img src={% static "img/undraw_House_searching_re_stk8.svg" %} alt="">
+
+            </div>
+            <div class="right">
+                <h1 class="home-heading">stay<span>Watch</span></h1>
+                <h3>Find the perfect stay</h3>
+                <p>All available accomadation in one palce </p>
+                <div class="buttons">
+                  <button class="btn" >View More</button>
+                 
+
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="{% static 'js/index.js' %}></script>
+</body>
+{% endblock %}
+

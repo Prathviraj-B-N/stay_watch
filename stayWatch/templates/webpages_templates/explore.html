@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{%load static %}
+{% block content %}
+
+<head>
+  <title>Title</title>
+  <link rel="stylesheet" href={% static "css/explore.css" %}>
+</head>
+
+<body>
+  <div class="main">
+      <section class="explore">
+          <div class="search-bar-content">
+              <form action="post" class="search-bar-form">
+                  <div class="form-row">
+                      <div class="form-group  input-content col-12 col-lg-5">
+                        <i class='bx bx-search-alt-2 icon'></i>
+                          <input type="text " class="search-bar input-field" id="search-bar" placeholder="Search">
+                          
+                      </div>
+                      <div class="form-group  input-content col-12 col-lg-6">
+                        <div class="form-row">
+                          <div class="form-group  input-content col-6 col-lg-3">
+                            <select class="form-control" id="city">
+                              <option value="">City</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                              
+                          </div>
+                          <div class="form-group  input-content col-6 col-lg-3">
+                            <select class="form-control" id="institute">
+                              <option value="">Institute</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                            
+                        </div>
+                        <div class="form-group  input-content col-6 col-lg-3">
+                          <select class="form-control" id="Distance">
+                            <option value="">Distance</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                          
+                      </div>
+                      <div class="form-group  input-content col-6 col-lg-3">
+                        <select class="form-control" id="cost">
+                          <option value="">Cost</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        
+                    </div>
+
+                        </div>
+                        
+                          
+                      </div>
+                      <div class="form-group  input-content col-sm-offset-6 col-sm-2 col-lg-1">
+                        <button class="btn ">Search</button>
+                          
+                      </div>
+                   
+                      
+                  </div>
+
+              </form>
+
+             
+          </div>
+          <div class="details-content row">
+            <div class="card ">
+              <div class="body">
+                <div class="img-content">
+                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
+                </div>
+                <div class="home-details list-unstyled">
+                  <li class="home-name">Name:</li>
+                  <li class="home-name-value"></li><br>
+                  <li class="home-area">City/Area:</li>
+                  <li class="home-area-value"></li><br>
+                  <li class="home-cost">Cost/mon in Rs:</li>
+                  <li class="home-cost-value"></li><br>
+                  <li class="home-ratting"></li>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="button">
+                  <button class="btn">Know More</button>
+                </div>
+              </div>
+            </div>
+            <div class="card ">
+              <div class="body">
+                <div class="img-content">
+                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
+                </div>
+                <div class="home-details list-unstyled">
+                  <li class="home-name">Name:</li>
+                  <li class="home-name-value"></li><br>
+                  <li class="home-area">City/Area:</li>
+                  <li class="home-area-value"></li><br>
+                  <li class="home-cost">Cost/mon in Rs:</li>
+                  <li class="home-cost-value"></li><br>
+                  <li class="home-ratting"></li>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="button">
+                  <button class="btn">Know More</button>
+                </div>
+              </div>
+            </div>
+            <div class="card ">
+              <div class="body">
+                <div class="img-content">
+                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
+                </div>
+                <div class="home-details list-unstyled">
+                  <li class="home-name">Name:</li>
+                  <li class="home-name-value"></li><br>
+                  <li class="home-area">City/Area:</li>
+                  <li class="home-area-value"></li><br>
+                  <li class="home-cost">Cost/mon in Rs:</li>
+                  <li class="home-cost-value"></li><br>
+                  <li class="home-ratting"></li>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="button">
+                  <button class="btn">Know More</button>
+                </div>
+              </div>
+            </div>
+            <div class="card ">
+              <div class="body">
+                <div class="img-content">
+                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
+                </div>
+                <div class="home-details list-unstyled">
+                  <li class="home-name">Name:</li>
+                  <li class="home-name-value"></li><br>
+                  <li class="home-area">City/Area:</li>
+                  <li class="home-area-value"></li><br>
+                  <li class="home-cost">Cost/mon in Rs:</li>
+                  <li class="home-cost-value"></li><br>
+                  <li class="home-ratting"></li>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="button">
+                  <button class="btn">Know More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </section>
+     
+  </div>
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="{% static "js/explore.js" %}></script>
+ </body>
+
+{% endblock%}

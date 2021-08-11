@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <head>
+    <title>Title</title>
+    <link rel="stylesheet" href={% static "css/home.css" %}>
+  </head>
+  <body>
+    <div class="main">
+        <section class="home">
+            <h1 class="home-content-heading">Featured Accomadation</h1>
+            <div class="home-content row">
+                <div class="left">
+                    <div class="card">
+                        <div class="body">
+                            <div class="img-content">
+                                <img src={% static "img/pexels-binyamin-mellish-1396122.jpg" %} alt="">
+                            </div>
+                            <div class="home-details list-unstyled">
+                                <li class="home-name">Name:</li>
+                                <li class="home-name-value"></li><br>
+                                <li class="home-area">City/Area:</li>
+                                <li class="home-area-value"></li><br>
+                                <li class="home-cost">Cost/mon in Rs:</li>
+                                <li class="home-cost-value"></li><br>
+                                <li class="home-ratting"></li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Know More</button>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="body">
+                            <div class="img-content">
+                                <img src={% static "img/pexels-binyamin-mellish-1396122.jpg" %} alt="">
+                            </div>
+                            <div class="home-details list-unstyled">
+                                <li class="home-name">Name:</li>
+                                <li class="home-name-value"></li><br>
+                                <li class="home-area">City/Area:</li>
+                                <li class="home-area-value"></li><br>
+                                <li class="home-cost">Cost/mon in Rs:</li>
+                                <li class="home-cost-value"></li><br>
+                                <li class="home-ratting"></li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Know More</button>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="body">
+                            <div class="img-content">
+                                <img src={% static "img/pexels-binyamin-mellish-1396122.jpg" %} alt="">
+
+                            </div>
+                            <div class="home-details list-unstyled">
+                                <li class="home-name">Name:</li>
+                                <li class="home-name-value"></li><br>
+                                <li class="home-area">City/Area:</li>
+                                <li class="home-area-value"></li><br>
+                                <li class="home-cost">Cost/mon in Rs:</li>
+                                <li class="home-cost-value"></li><br>
+                                <li class="home-ratting"></li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="button">
+                                <button class="btn">Know More</button>
+                              </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="right">
+                   <form action="POST" >
+                       <div class="form-row search-bar">
+                        <div class="form-group  input-content ">
+                            <i class='bx bx-search-alt-2 icon'></i>
+                              <input type="text " class="search-bar input-field" id="search-bar" placeholder="Search">
+                              
+                          </div>
+
+                       </div>
+                       
+                       <div class="card">
+                        <div class="body">
+                            <div class="filter-heading">
+                                <h1>Apply Filters</h1>
+                            </div>
+                           <form action="POST">
+                               <div class="form-row">
+                                   <div class="form-group">
+                                       <input type="text" name="filter-name" id="filter-name">
+ 
+                                   </div>
+                                   <div class="form-group">
+                                     <input type="text" name="filter-name" id="filter-name">
+ 
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="text" name="filter-name" id="filter-name">
+ 
+                                 </div>
+                                 <div class="form-group offset-5 ">
+                                     <button class="btn  ">Apply</button>
+                                 </div>
+                               </div>
+                           </form>
+                        </div>
+                    </div>
+
+                   </form>
+                  
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src={% static "js/home.js" %}></script>
+  </body>
+
+{% endblock %}

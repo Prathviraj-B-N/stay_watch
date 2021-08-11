@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: hsl(0, 0%, 30%);
+}
+
+header{
+    background: hsl(0, 0%, 4%)	;
+}
+.navbar{
+    padding:0  5rem 0 5rem;
+    height: 80px;
+
+}
+
+.navbar .navbar-brand{
+    font-size: 40px;
+    color: white;
+
+}
+.navbar .navbar-brand span{
+    color: crimson;
+}
+.navbar-nav{
+    display: inline;
+}
+.navbar-nav .navbar-item   {
+    display: inline-block;
+    margin-left: 15px;
+  
+}
+.navbar-nav .navbar-item a{
+    color: white;
+    font-size: 18px;
+}
+.navbar-nav .button{
+    display: inline;
+    margin-left:15px ;
+   
+    
+}
+.navbar-nav .button button{
+    background: hsl(16, 100%, 50%)	;
+    color: white;
+    margin-left: 15px;
+    transition: 0.5s ease all;
+    font-size: 18px;
+}
+.navbar-nav .button button:hover{
+    color: hsl(16, 100%, 50%);
+    background: transparent;
+    border: 1px solid white;
+}
+.navbar.nav-toggle{
+    display: none;
+}
+
+.main{
+    padding:0  5rem 0 5rem;
+    margin-top: 50px;
+  
+    
+  
+}
+.home .home-content-heading{
+    color: white;
+    font-size: 30px;
+}
+.home .left{
+    display: flex;
+    flex-flow:wrap;
+    margin-top: 20px;
+    
+    width: 80%;
+}
+.home .left .card{
+    width: 300px;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+.home .left .card .body .img-content img{
+    width: 100%;
+    height: 200px;
+}
+.home .left .card .body .home-details {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.home .left .card .body .home-details li{
+    display: inline;
+}
+.home .left .card .body  .checked{
+    color: orange;
+}
+.home .right{
+    display: flex;
+    flex-flow: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 20%;
+}
+.home .right form .form-group .search-bar{
+    width: 120%;
+    padding: 5px 5px 5px 30px;
+    font-size: 20px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid black;
+    outline: none;
+}
+.home .right form .form-group i{
+    position:absolute;
+    padding: 11px 5px 5px 15px;
+    font-size: 25px;
+}
+.home .right  .card{
+    width: 300px;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    justify-content: center ;
+    text-align: center;
+    
+   
+    
+}
+.home .right .card .body h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.home .right .card .body .form-group input{
+   width: 120%;
+   margin-top: 10px;
+    padding: 2px 2px 2px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+
+}
+
+.home .right .card .body .form-group button{
+    background: hsl(16, 100%, 50%);
+    color: white;
+    
+
+}
+
+
+
+.home .left .card .body .button{
+    text-align: center;
+    justify-content: center;
+    background-color: #1E1E24;
+    margin-bottom: 10px;
+    transition: 0.8s;
+}
+.home .left .card .body  .button button{
+    color: white;
+    transition: 0.8s;
+}
+.home .left .card .body  .button:hover{
+    background-color: transparent;
+    
+   
+
+}
+.home .left .card .body  .button:hover button{
+    color: black;
+    outline: none;
+    
+}
+
+@media (min-width: 200px) and (max-width: 575.98px) { 
+    .navbar{
+        padding:0  2rem 0 2rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .main{
+        padding:0  2rem 0 2rem;
+      
+      
+    }
+    .home .left{
+       
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .home .right{
+        width: 100%;
+        order: 1;
+    }
+   
+  
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar{
+        padding:0  3rem 0 3rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .main{
+        padding:0  3rem 0 3rem;
+ 
+      
+    }
+    .home .left{
+       
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .home .right{
+        width: 100%;
+        order: 1;
+    }
+    
+  
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar{
+        padding:0  4rem 0 4rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .main{
+        padding:0  4rem 0 4rem;
+   
+      
+    }
+    .home .left{
+       
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .home .right{
+        width: 100%;
+        order: 1;
+    }
+   
+   
+
+    
+   
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+
