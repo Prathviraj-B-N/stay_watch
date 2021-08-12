@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'webpages.templatetags.my_filters',
     'webpages.apps.WebpagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -65,6 +66,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries':{
+                'filter': 'webpages.templatetags.my_filters',
+            },
         },
     },
 ]
