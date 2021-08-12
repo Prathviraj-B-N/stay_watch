@@ -138,26 +138,26 @@
 ----------------------------------------------
 14. Add your static files like js,css into staticFiles foder
 
-    python manage.py collectstatic
-    in html files add {% load static %}
+        python manage.py collectstatic
+        in html files add {% load static %}
 ----------------------------------------------
 15. Setup paths for css and js in html files
 
-    {% static "css/filename.css" %} by default searches in static
+        {% static "css/filename.css" %} by default searches in static
 ----------------------------------------------
 16. Model the data
     
-    webpages>>models.py
-    after modelling register it in admin.py
-        python manage.py makemigrations
-        python manage.py migrate
+        webpages>>models.py
+        after modelling register it in admin.py
+            python manage.py makemigrations
+            python manage.py migrate
 ----------------------------------------------
 17. Access data from webpage
 
         in views.py import model
         query data 
         pass it to render method
-        to add photo to html : {{ obk.photo.url }}
+        to add photo to html : {{ obj.photo.url }}
 ----------------------------------------------
 18. To add user defined filter to use in jinja templating
 
@@ -168,7 +168,7 @@
             bregister your filter in it
         2.in settings.py
             a.register filter.py in registered apps
-            
+
             b.add
                 libraries':{
                     'filter': 'webpages.templatetags.my_filters',
