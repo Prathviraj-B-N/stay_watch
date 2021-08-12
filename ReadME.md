@@ -162,11 +162,13 @@
 18. To add user defined filter to use in jinja templating
 
     (used this to implement rating system)
+        
         1.create templatetags directory in app level
             a.create filter.py
             bregister your filter in it
         2.in settings.py
             a.register filter.py in registered apps
+            
             b.add
                 libraries':{
                     'filter': 'webpages.templatetags.my_filters',
