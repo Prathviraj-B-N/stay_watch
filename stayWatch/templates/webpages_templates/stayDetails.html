@@ -9,10 +9,9 @@
         .main{
             padding:2rem;
             margin-top: 50px; 
-        }
-        h1{
             color: white;
         }
+        
         .left{
             display: flex;
             flex-flow:wrap;
@@ -30,32 +29,27 @@
         }
     </style>
     <body >
-        <div class = "main"> 
+        <div class = "main" > 
             <h1>
                 {{stays.name}}
             </h1>
-            <div class="left">  
-                <img src={{stays.photo.url}} alt="">
-            </div>
-            <div class="right">
-                <p>Description</p>
-                <p>{{stays.description}}</p>
-                <br>
-                <p>
-                    {{stays.addr_line1}}
-                    <br>
-                    {{stays.addr_line2}}
-                    <br>
-                    {{stays.city}}
-                    <br>
-                    {{stays.state}}
-                    <br>
-                    {{stays.pincode}}
-                    <br>
-                    {{stays.owner}}
-                    <br>
-                </p>
-            </div>
+            <br>
+                    <div class="home-details list-unstyled">
+                        <img src={{stays.photo.url}} alt="">
+                        <br><br>
+                        <li class="home-name">Description:</li>
+                        <li class="home-name-value">{{stays.description | safe}}</li><br>
+                        <li class="home-area">Address:</li>
+                        <li class="home-area-value">{{stays.addr_line1}}</li>
+                        <li class="home-area-value">{{stays.addr_line2}}</li>
+                        <li class="home-area-value">{{stays.city}}</li>
+                        <li class="home-area-value">{{stays.state}}</li>
+                        <li class="home-area-value">{{stays.pincode}}</li>
+                        <li class="home-cost">Owner:</li>
+                        <li class="home-cost-value">{{stays.owner}}</li>
+                        <li class="home-ratting"></li>
+                    </div>
+   
         </div>
        
     </body>

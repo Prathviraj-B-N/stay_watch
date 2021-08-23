@@ -8,6 +8,14 @@ class StayAdmin(admin.ModelAdmin):
     list_filter = ('cost','rating','isFeatured')
     list_editable = ('isFeatured',)
 
+class landlordAdmin(admin.ModelAdmin):
+    list_display = ('name','phone')
+    search_fields = ('name','phone','email')
+
+class tenantAdmin(admin.ModelAdmin):
+    list_display = ('name','phone')
+    search_fields = ('name','phone','email')
+
 admin.site.register(Stays,StayAdmin)
-admin.site.register(landlord)
-admin.site.register(tenant)
+admin.site.register(landlord,landlordAdmin)
+admin.site.register(tenant,tenantAdmin)
