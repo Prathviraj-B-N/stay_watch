@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <head>
+    <title>Title</title>
+    <link rel="stylesheet" href={% static "css/explore.css" %}>
+    </head>
+    <style>
+        .main{
+            padding:2rem;
+            margin-top: 50px; 
+        }
+        h1{
+            color: white;
+        }
+        .left{
+            display: flex;
+            flex-flow:wrap;
+            margin-top: 20px;
+            
+            width: 30%;
+        }
+        .right{
+            display: flex;
+            flex-flow: column;
+            text-align: left;
+            margin-top: 40px;
+            width: 70%;
+            color: white;
+        }
+    </style>
+    <body >
+        <div class = "main"> 
+            <h1>
+                {{stays.name}}
+            </h1>
+            <div class="left">  
+                <img src={{stays.photo.url}} alt="">
+            </div>
+            <div class="right">
+                <p>Description</p>
+                <p>{{stays.description}}</p>
+                <br>
+                <p>
+                    {{stays.addr_line1}}
+                    <br>
+                    {{stays.addr_line2}}
+                    <br>
+                    {{stays.city}}
+                    <br>
+                    {{stays.state}}
+                    <br>
+                    {{stays.pincode}}
+                    <br>
+                    {{stays.owner}}
+                    <br>
+                </p>
+            </div>
+        </div>
+       
+    </body>
+    
+{% endblock %}

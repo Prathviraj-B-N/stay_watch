@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {%load static %}
+{% load filter %}
 {% block content %}
 
 <head>
@@ -82,102 +83,33 @@
              
           </div>
           <div class="details-content row">
+            {% for stay in stays %}
             <div class="card ">
               <div class="body">
                 <div class="img-content">
-                  <img src={% static "img/pexels-binyamin-mellish-1396122.jpg" %} alt="">
+                  <img src={{stay.photo.url}} alt="">
                 </div>
                 <div class="home-details list-unstyled">
                   <li class="home-name">Name:</li>
-                  <li class="home-name-value"></li><br>
+                  <li class="home-name-value">{{stay.name}}</li><br>
                   <li class="home-area">City/Area:</li>
-                  <li class="home-area-value"></li><br>
-                  <li class="home-cost">Cost/mon in Rs:</li>
-                  <li class="home-cost-value"></li><br>
+                  <li class="home-area-value"></li>{{stay.city}}<br>
+                  <li class="home-cost">Rent Rs:</li>
+                  <li class="home-cost-value">{{stay.cost}}/mo</li><br>
                   <li class="home-ratting"></li>
+                  {% for i in stay.rating|times %}
                   <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
+                  {% endfor %}
+                  {% for i in stay.rating|times_dash %}
                   <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
+                  {% endfor %}
                 </div>
                 <div class="button">
-                  <button class="btn">Know More</button>
+                  <a href={% url 'stayDetails' stay.id %}><button class="btn">Know More</button></a>
                 </div>
               </div>
             </div>
-            <div class="card ">
-              <div class="body">
-                <div class="img-content">
-                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
-                </div>
-                <div class="home-details list-unstyled">
-                  <li class="home-name">Name:</li>
-                  <li class="home-name-value"></li><br>
-                  <li class="home-area">City/Area:</li>
-                  <li class="home-area-value"></li><br>
-                  <li class="home-cost">Cost/mon in Rs:</li>
-                  <li class="home-cost-value"></li><br>
-                  <li class="home-ratting"></li>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </div>
-                <div class="button">
-                  <button class="btn">Know More</button>
-                </div>
-              </div>
-            </div>
-            <div class="card ">
-              <div class="body">
-                <div class="img-content">
-                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
-                </div>
-                <div class="home-details list-unstyled">
-                  <li class="home-name">Name:</li>
-                  <li class="home-name-value"></li><br>
-                  <li class="home-area">City/Area:</li>
-                  <li class="home-area-value"></li><br>
-                  <li class="home-cost">Cost/mon in Rs:</li>
-                  <li class="home-cost-value"></li><br>
-                  <li class="home-ratting"></li>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </div>
-                <div class="button">
-                  <button class="btn">Know More</button>
-                </div>
-              </div>
-            </div>
-            <div class="card ">
-              <div class="body">
-                <div class="img-content">
-                  <img src="../img/pexels-binyamin-mellish-1396122.jpg" alt="">
-                </div>
-                <div class="home-details list-unstyled">
-                  <li class="home-name">Name:</li>
-                  <li class="home-name-value"></li><br>
-                  <li class="home-area">City/Area:</li>
-                  <li class="home-area-value"></li><br>
-                  <li class="home-cost">Cost/mon in Rs:</li>
-                  <li class="home-cost-value"></li><br>
-                  <li class="home-ratting"></li>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </div>
-                <div class="button">
-                  <button class="btn">Know More</button>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
 
       </section>

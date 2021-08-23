@@ -71,8 +71,8 @@
 ----------------------------------------------
 7. Add path to templates folder
 
-    settings.py > TEMPLATES > 'DIRS': ['templates']
-    Create directory 'templates' in main project folder
+        settings.py > TEMPLATES > 'DIRS': ['templates']
+        Create directory 'templates' in main project folder
 
 ----------------------------------------------
  8. Serving static files
@@ -98,13 +98,13 @@
 ----------------------------------------------
 9. Create an app 'webpages'
     
-    python manage.py startapp webpages
+        python manage.py startapp webpages
 
-    creates an app named webpages with app name 'WebpagesConfig'
-    add urls.py file to webpages app
+        creates an app named webpages with app name 'WebpagesConfig'
+        add urls.py file to webpages app
 
-    settings.py >
-    add 'webpages.apps.WebpagesConfig' to INSTALLED_APPS
+        settings.py >
+        add 'webpages.apps.WebpagesConfig' to INSTALLED_APPS
 ----------------------------------------------
 10. Setting up urls.py in main project folder(project level urls.py)
 
@@ -175,6 +175,14 @@
                 },
 
             to templates>options
+
+19. href = {% url 'name' %} here name is the name you have assigned to url in urls.py
+
+20. pipenv install django-ckeditor
+
+21. in admin.py you can edit admin panel look 
+        you can add search fields etc to admin panel by defining a class
+            ex: class StayAdmin(admin.ModelAdmin):
 
 
 
