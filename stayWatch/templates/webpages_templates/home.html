@@ -1,55 +1,75 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load filter %}
+
 {% block content %}
 <head>
-    <title>Title</title>
-    <link rel="stylesheet" href={% static "css/explore.css" %}>
-  </head>
-  <body>
-    <div class="main">
-        <section class="home">
-            <h1 class="home-content-heading">Featured Accomadation</h1>
-            <div class="home-content row">
-                <div class="left">
-                    
-                    {% for stay in featured %}
-                    <div class="card">
-                        <div class="body">
-                            <div class="img-content">
-                                <img src={{stay.photo.url}} alt="">
-                            </div>
-                            <div class="home-details list-unstyled">
-                                <li class="home-name">Name:</li>
-                                <li class="home-name-value">{{stay.name}}</li><br>
-                                <li class="home-area">City/Area:</li>
-                                <li class="home-area-value">{{stay.city}}</li><br>
-                                <li class="home-cost">Rent:</li>
-                                <li class="home-cost-value">:Rs{{stay.cost}}</li><br>
-                                <li class="home-ratting"></li>
-                                
-                                {% for i in stay.rating|times %}
-                                    <span class="fa fa-star checked"></span>
-                                {% endfor %}
-                                {% for i in stay.rating|times_dash %}
-                                    <span class="fa fa-star"></span>
-                                {% endfor %}
-                                
-                                
-                            </div>
-                            <div class="button">
-                                <a href={% url 'stayDetails' stay.id %}><button class="btn">Know More</button></a>
-                              </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                   
-                </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <title>Home</title>
+</head>
 
+<body>
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Featured Accomadation</h1>
+                <div class="h-1 w-20 bg-green-500 rounded"></div>
+                </div>
             </div>
-        </section>
-    </div>
-    <script src={% static "js/home.js" %}></script>
-  </body>
+
+
+
+            <div class="flex flex-wrap -m-4">
+                
+                {% for stay in featured %}
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-800 bg-opacity-100 p-6 rounded-lg">
+                        <a href={% url 'stayDetails' stay.id %}><img class="h-40 rounded w-full object-cover object-center mb-6" src={{stay.photo.url}} alt="content">
+                        </a>
+                        <h3 class="tracking-widest text-green-400 text-xs font-medium title-font">{{stay.city}}</h3>
+                        <h2 class="text-lg text-white font-medium title-font mb-4">{{stay.name}}</h2>
+                        <p class="leading-relaxed text-base">Rs{{stay.cost}}</p>
+                                    
+                        
+                        <!-- rating system -->
+                                    <div class="flex items-center mt-2 mb-4">
+                                        {% for i in stay.rating|times %}
+                                        <svg class="mx-1 w-4 h-4 fill-current text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z">
+                                        </svg>
+                                        {% endfor %}
+                                        {% for i in stay.rating|times_dash %}
+                                        <svg class="mx-1 w-4 h-4 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                        </svg>
+                                        {% endfor %}
+                                    
+
+
+                                    <a href={% url 'stayDetails' stay.id %}>
+                                    <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">See more
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                        </svg>
+                                      </button>
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+                
+                {% endfor %}
+                
+            </div>
+        
+        
+        </div>
+    </section>
+</body>
 
 {% endblock %}
+

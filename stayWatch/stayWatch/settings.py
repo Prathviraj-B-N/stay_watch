@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'stayAuth.apps.StayauthConfig',
     'webpages.templatetags.my_filters',
     'webpages.apps.WebpagesConfig',
     'django.contrib.admin',

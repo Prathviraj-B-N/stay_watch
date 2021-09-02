@@ -183,6 +183,10 @@
 21. in admin.py you can edit admin panel look 
         you can add search fields etc to admin panel by defining a class
             ex: class StayAdmin(admin.ModelAdmin):
+    
+22. User Auth
+        Create a new app for auth lets call it stayAuth
+
 
 
 

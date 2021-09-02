@@ -28,8 +28,7 @@ class Stays(models.Model):
     description = RichTextField()
     owner = models.ForeignKey(landlord , default=None, on_delete=SET_NULL , null=True)
     isFeatured = models.BooleanField(default=False)
-
-
+    
     def __str__(self):
         return self.name
 

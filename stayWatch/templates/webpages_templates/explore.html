@@ -1,124 +1,136 @@
 {% extends 'base.html' %}
 {%load static %}
 {% load filter %}
+
 {% block content %}
 
 <head>
   <title>Title</title>
-  <link rel="stylesheet" href={% static "css/explore.css" %}>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
 </head>
 
+
 <body>
-  <div class="main">
-      <section class="explore">
-          <div class="search-bar-content">
-              <form method="GET" action={% url 'explore' %} class="search-bar-form">
-                  <div class="form-row">
-                      <div class="form-group  input-content col-12 col-lg-5">
-                        <i class='bx bx-search-alt-2 icon'></i>
-                          <input name="keyword" type="text " class="search-bar input-field" id="search-bar" placeholder="Search City or Stay">
-                          
-                      </div>
-                      <div class="form-group  input-content col-12 col-lg-6">
-                        <div class="form-row">
-                          <div class="form-group  input-content col-6 col-lg-3">
-                            <select name = "city" class="form-control" id="city">
-                              <option value="">City</option>
-                              {% for city in city_search_list %}
-                              <option value={{city}}>{{city}}</option>
-                              {% endfor %}  
-                            </select>
-                              
-                          </div>
-                          <div class="form-group  input-content col-6 col-lg-3">
-                            <select name = "pin" class="form-control" id="pincode">
-                              <option value="">pincode</option>
-                              {% for pin in pincode_search_list %}
-                              <option value={{pin}}>{{pin}}</option>
-                              {% endfor %}  
-                            </select>
-                            
-                        </div>
-                        <div class="form-group  input-content col-6 col-lg-3">
-                          <select name = "rating" class="form-control" id="rating">
-                            <option value="">Rating</option>
-                            
-                            {% for rating in rating_search_list %}
-                              <option value={{rating}}>{{rating}}</option>
-                              {% endfor %} 
-                          </select>
-                          
-                      </div>
-                      <div class="form-group  input-content col-6 col-lg-3">
-                        <select name = "cost" class="form-control" id="cost">
-                          <option value="">Cost</option>
-                          
-                          {% for cost in cost_search_list %}
-                              <option value={{cost}}>{{cost}}</option>
-                              {% endfor %} 
-                        </select>
-                        
-                    </div>
 
-                        </div>
-                        
-                          
-                      </div>
-                      <div class="form-group  input-content col-sm-offset-6 col-sm-2 col-lg-1">
-                        <button class="btn ">Search</button>
-                          
-                      </div>
-                   
-                      
-                  </div>
 
-              </form>
+  <div class="text-gray-400 body-font bg-gray-900 ">
+    <div class="-mx-3 flex flex-wrap">
+      <form method="GET" action={% url 'explore' %}>
+        <div class="container px-5 py-2 mx-auto">
 
-             
-          </div>
-          <div class="details-content row">
-            {% if stays %}
-            {% for stay in stays %}
-            <div class="card ">
-              <div class="body">
-                <div class="img-content">
-                  <img src={{stay.photo.url}} alt="">
-                </div>
-                <div class="home-details list-unstyled">
-                  <li class="home-name">Name:</li>
-                  <li class="home-name-value">{{stay.name}}</li><br>
-                  <li class="home-area">City/Area:</li>
-                  <li class="home-area-value"></li>{{stay.city}}<br>
-                  <li class="home-cost">Rent Rs:</li>
-                  <li class="home-cost-value">{{stay.cost}}/mo</li><br>
-                  <li class="home-ratting"></li>
-                  {% for i in stay.rating|times %}
-                  <span class="fa fa-star checked"></span>
-                  {% endfor %}
-                  {% for i in stay.rating|times_dash %}
-                  <span class="fa fa-star"></span>
-                  {% endfor %}
-                </div>
-                <div class="button">
-                  <a href={% url 'stayDetails' stay.id %}><button class="btn">Know More</button></a>
-                </div>
-              </div>
-            </div>
+          <input name="keyword" type="text " class="search-bar input-field" id="search-bar"
+            placeholder="Search City or Stay">
+
+
+
+          <select name="city" class="form-control" id="city">
+            <option value="">City</option>
+            {% for city in city_search_list %}
+            <option value={{city}}>{{city}}</option>
             {% endfor %}
-            
-            {% else %}
-            <p style="color: white;">No Such Stays found</p>
-            {% endif %}
-          </div>
+          </select>
 
-      </section>
-     
+
+          <select name="pin" class="form-control" id="pincode">
+            <option value="">pincode</option>
+            {% for pin in pincode_search_list %}
+            <option value={{pin}}>{{pin}}</option>
+            {% endfor %}
+          </select>
+
+          <select name="rating" class="form-control" id="rating">
+            <option value="">Rating</option>
+            {% for rating in rating_search_list %}
+            <option value={{rating}}>{{rating}}</option>
+            {% endfor %}
+          </select>
+
+
+          <select name="cost" class="form-control" id="cost">
+            <option value="">Cost</option>
+
+            {% for cost in cost_search_list %}
+            <option value={{cost}}>{{cost}}</option>
+            {% endfor %}
+          </select>
+
+          <button
+            class="px-5 py-3 rounded-xl text-sm font-medium text-white bg-green-500 hover:bg-green-800 active:bg-grey-900 focus:outline-none border-1 border-white focus:border-black-800 transition-all"><i
+              class="mdi mdi-circle-outline mr-2 text-xl align-middle leading-none"></i>Search
+          </button>
+
+        </div>
+
+    </div>
   </div>
-  
+  </form>
+  </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script src="{% static "js/explore.js" %}></script>
- </body>
 
-{% endblock%}
+
+
+
+
+  <section class="text-gray-400 body-font bg-gray-900">
+    <div class="container px-5 py-24 mx-auto">
+      {% if stays %}
+      <div class="flex flex-wrap -m-4">
+
+        {% for stay in stays %}
+        <a href={% url 'stayDetails' stay.id %}></a>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 bg-opacity-100 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src={{stay.photo.url}} alt="content">
+            <h3 class="tracking-widest text-green-400 text-xs font-medium title-font">{{stay.city}}</h3>
+            <h2 class="text-lg text-white font-medium title-font mb-4">{{stay.name}}</h2>
+            <p class="leading-relaxed text-base">Rs{{stay.cost}}</p>
+
+            <!-- rating system -->
+            <div class="flex items-center mt-2 mb-4">
+              {% for i in stay.rating|times %}
+              <svg class="mx-1 w-4 h-4 fill-current text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z">
+              </svg>
+              {% endfor %}
+              {% for i in stay.rating|times_dash %}
+              <svg class="mx-1 w-4 h-4 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+              </svg>
+              {% endfor %}
+
+
+
+              <a href={% url 'stayDetails' stay.id %}>
+                <button
+                  class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">See
+                  more
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+
+      {% else %}
+      <p style="color: white;">No Such Stays found</p>
+      {% endif %}
+    </div>
+
+  </section>
+
+  </div>
+</body>
+
+{% endblock %}

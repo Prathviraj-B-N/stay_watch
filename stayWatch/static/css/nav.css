@@ -1,0 +1,173 @@
+@media (min-width: 200px) and (max-width: 575.98px) { 
+    .navbar{
+        padding:0  2rem 0 2rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+        
+        
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar{
+        padding:0  3rem 0 3rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+        transition: 0.8s;
+        
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar{
+        padding:0  4rem 0 4rem;
+        
+    
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        padding-top: 40px;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        height: 500px;
+        background: black;
+        color: white;
+        transition: 0.8s ease all;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar-nav-active{
+        top: 0 !important;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a{
+        margin-top: 10px;
+    }
+    .navbar .navbar-nav .button{
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    .navbar .navbar-nav .button button{
+        margin-top: 20px;
+
+    }
+   
+    .navbar .nav-toggle{
+        display: inline;
+        margin-left: auto;
+        z-index: 1000;
+        transition: 0.8s;
+
+    }
+    .navbar .nav-toggle i{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+     
+
+      
+    }
+}

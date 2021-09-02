@@ -1,23 +1,23 @@
 {% load static %}
 <head>
   <title>Title</title>
-  <link rel="stylesheet" href={% static "css/home.css" %}>
+  <link rel="stylesheet" href={% static "css/nav.css" %}>
 </head>
-<nav class="navbar" style="background-color: #000000;">
-    <a class="navbar-brand" href={% url "home"%}>Stay<span>watch</span></a>
-    <ul class="navbar-nav list-unstyled ml-auto">
-        <li class="navbar-item"><a class="nav-link" href={% url 'home' %}>Home </a></li>
-        <li class="navbar-item"><a class="nav-link" href={% url 'explore' %}>Explore</a></li>
-        <li class="navbar-item"><a class="nav-link" href="">Settings</a</li>
-          <li class="navbar-item"><a class="nav-link" href={% url 'about' %}>About</a></li>
-        <li class="button navbar-item">
-          <button class="btn" >Sign In</button>
-        </li>
-        <li class="button navbar-item">
-          <button class="btn" >Sign Up</button>
-        </li> 
-    </ul>
-    <div class="nav-toggle " id="nav-toggler">
-      <i class='bx bx-menu'></i>
-    </div>  
+<nav class="navbar">
+  <a class="navbar-brand" href={% url 'home' %}>Stay<span>watch</span></a>
+  <ul class="navbar-nav list-unstyled ml-auto">
+      <li class="navbar-item"><a class="nav-link" href={% url "home"%}>Home </a></li>
+      <li class="navbar-item"><a class="nav-link" href={% url 'explore' %}>Explore</a></li>
+      <li class="navbar-item"><a class="nav-link" href="">Setting</a</li>
+      <li class="navbar-item"><a class="nav-link" href={% url 'about' %}>About</a></li>
+      <li class="button navbar-item">
+        <button class="btn" >Sign In</button>
+      </li>
+      <li class="button navbar-item">
+        <button class="btn" >Sign Up</button>
+      </li> 
+  </ul>
+  <div class="nav-toggle " id="nav-toggler">
+    <i class='bx bx-menu'></i>
+  </div>  
 </nav>

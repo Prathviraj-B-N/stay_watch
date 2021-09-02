@@ -42,17 +42,17 @@ def explore(request):
     if 'pincode' in request.GET:
         pincode = request.GET['pincode']
         if pincode:
-            stays = stays.filter(city__exact = pincode)
+            stays = stays.filter(pincode__exact = pincode)
 
     if 'rating' in request.GET:
         rating = request.GET['rating']
         if rating:
-            stays = stays.filter(city__exact = rating)
+            stays = stays.filter(rating__exact = rating)
 
     if 'cost' in request.GET:
         cost = request.GET['cost']
         if cost:
-            stays = stays.filter(city__exact = cost)
+            stays = stays.filter(cost__exact = cost)
     
     
     data = {
@@ -69,6 +69,9 @@ def stayDetails(request, id):
     stays = get_object_or_404(Stays,pk=id)
     data = {'stays':stays}
     return render(request, 'webpages_templates/stayDetails.html',data)
+
+def account(request,uid):
+    pass
 
 
 
