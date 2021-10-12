@@ -1,5 +1,12 @@
 ![Framework](https://img.shields.io/badge/Django-3.2.6-blue)
 
+
+
+![Screenshot](https://github.com/Prathviraj-B-N/stay_watch/blob/ef8b955b8c8a8b83a5c1e3f25fd271a554d5f6b4/stayWatch/Capture.JPG)
+
+
+
+
 ----------------------------------------------
 
 
